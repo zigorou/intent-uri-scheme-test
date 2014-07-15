@@ -2,8 +2,16 @@
 <html>
   <head>
     <title>intent:</title>
+    <script type="text/javascript">
+      document.getElementById("redirect").addEventListener("click", function(evt) {
+          setTimeout(function() {
+              location.href = "intent:#Intent;S.webapp_url=javascript:alert('Hello chrome');l.webapp_id=1;SEL;component=com.android.chrome/com.google.android.apps.chrome.webapps.WebappActivity0;end";
+          }, 1500);
+      }, false);
+    </script>
   </head>
   <body>
     <a href="intent:#Intent;scheme=http;action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;package=com.google.android;end">Open facebook by Chrome for Android</a>
+    <a href="javascript:void(0);" id="redirect">test</a>
   </body>
 </html>
